@@ -1,0 +1,136 @@
+
+/* <-------  globals & defaults -------> */
+
+*{ margin:0px; padding:0px; }
+
+body{ font-family: sans-serif; color: #2F2D2A  ;}
+
+header{	width: 100%;}
+
+h1 {
+	font-family: "LeagueGothicRegular",helvetica,arial,sans-serif;
+	font-size: 28px;
+	letter-spacing: 1px;
+	margin: 0px;
+	padding: 0px;
+	text-transform: uppercase;
+	display: inline;
+}
+
+a{text-decoration:none;}
+
+.collapse-690{display:none}
+.collapse-565{display:none}
+#h-nav-dropdown{display:none}
+
+/* <-------  primary styles -------> */
+
+.pagewidth{
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+	width: 960px;
+	
+}
+	
+#container{
+	width:100%;
+	padding: 0px;
+}
+
+
+/*****************************/
+/* <-------  HEADER -------> */
+/*****************************/
+
+#container > header{
+	background: #2F2D2A  ;
+	border-bottom: 4px solid #DA3838 ;
+	box-shadow: 0px 2px 0px #BABABA;
+	height: 50px;
+	position: fixed;	
+	z-index: 5;
+}
+
+/* image */
+#h-image{
+	float:left;
+	width:105px;
+	height:100px;
+	background-color: #2F2D2A ;
+	border-bottom-right-radius: 50px;
+	border-bottom:4px solid #DA3838;
+	box-shadow: 0px 2px 0px #BABABA;
+}
+
+/* title */
+#h-title > h1{
+	font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif;
+	font-size: 40px;
+	color: #DA3838;
+	font-weight: 500;
+	letter-spacing: 10px;
+	margin-left:25px;
+}
+
+/* social-navigation */
+#h-title > nav{
+	float: right;
+	padding-top: 4px;
+}
+
+#h-title > nav img{
+	width: 35px;
+	border-radius: 10px;
+	background-color: rgb(218, 56, 56);
+	border: 1px solid rgb(186, 186, 186);
+	margin-left: 10px;
+} 
+
+#h-btn-dropdown a{padding-right:10px;}
+
+#h-nav-dropdown a{display: block;}
+
+
+
+
+
+
+	
+/* <-------  main -------> */
+
+#main{
+	background-image:url('../images/background.png');
+	padding: 125px 0px 30px;
+}
+
+/* **************************************** */
+/* **************@MEDIA TYPES************** */
+/* **************************************** */
+
+@media only screen and (max-width: 960px){
+    .pagewidth {
+        width: 90%;
+        padding: 0px 5%;
+    }
+}
+
+@media only screen and (max-width: 690px){
+    .default-690 {
+        display:none;
+    }
+    .collapse-690{
+    	display: inline;
+    }
+}
+
+@media only screen and (max-width: 565px){
+	.default-565 {
+        display:none;
+    }
+    .collapse-565{
+    	display: inline;
+    }
+}
+
+
