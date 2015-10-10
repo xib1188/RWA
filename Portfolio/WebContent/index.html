@@ -10,47 +10,42 @@
 		<title>D15123149 Xavier Ibáñez Barrios</title>
 		<link href='images/icon.ico' rel='shortcut icon' type='image/x-icon'>
 	</head>
-	<body>
+	<body onload="windResize()">
 		<div id="container">
 			<header>
-				<div id="h-image">
+				<div id="h-div-image">
 					<a title="Main page" href="">
 						<img alt="home" src="images/ene.png" onmouseover="hover(this,'images/ene_hov.png');" onmouseout="unhover(this,'images/ene.png');">
 					</a>
 				</div>
-				<div id="h-title" class="pagewidth" style="padding-top:3px">
-					<h1 class="default-565">Xavier Ibáñez</h1>
-					<h1 class="collapse-565">X.I.</h1>
-					<nav class="default-690">
+				<div id="h-div-title" class="pagewidth" style="padding-top:3px">
+					<h1 id="h-title" class="rs">Xavier Ibáñez</h1>
+					<nav>
+						<a id="hsb-coll-link" class="rs" title="Social" href="#" >
+							<img id="hsb-coll" class="c-click" alt="" src="images/collapse.png" onmouseover="hover(this,'images/collapse_hov.png');" onmouseout="unhover(this,'images/collapse.png');">
+						</a>
+						
 						<a title="Follow me in facebook" href="https://www.facebook.com/xavi.ibanezbarrios">
 							<img alt="" src="images/face.png" onmouseover="hover(this,'images/face_hov.png');" onmouseout="unhover(this,'images/face.png');">
 						</a>
 						<a title="Follow me in google+" href="https://plus.google.com/109696929704588647281/about">
 							<img alt="" src="images/google.png" onmouseover="hover(this,'images/google_hov.png');" onmouseout="unhover(this,'images/google.png');">
 						</a>
-						<a>
+						<a id="hsb-cont-link">
 							<img alt="" src="images/contact.png" onmouseover="hover(this,'images/contact_hov.png');" onmouseout="unhover(this,'images/contact.png');">
 						</a>
 					</nav>
-					<nav id="h-btn-dropdown" class="collapse-690">
-						<a title="Social" href="#">
-							<img id="" alt="" src="images/collapse.png" onmouseover="hover(this,'images/collapse_hov.png');" onmouseout="unhover(this,'images/collapse.png');" onclick="dropdown();">
-						</a>
-						<nav id="h-nav-dropdown">
-							<a title="Follow me in facebook" href="https://www.facebook.com/xavi.ibanezbarrios">
-								<img alt="" src="images/face.png" onmouseover="hover(this,'images/face_hov.png');" onmouseout="unhover(this,'images/face.png');">
-							</a>
-							<a title="Follow me in google+" href="https://plus.google.com/109696929704588647281/about">
-								<img alt="" src="images/google.png" onmouseover="hover(this,'images/google_hov.png');" onmouseout="unhover(this,'images/google.png');">
-							</a>
-							<a title="Contact me" href="#" >
-								<img alt="" src="images/contact.png" onmouseover="hover(this,'images/contact_hov.png');" onmouseout="unhover(this,'images/contact.png');">
-							</a>
-						</nav>
-					</nav>
 				</div>
 			</header>
-			<div id="main"></div>
+			<main>
+				<aside class="pagewidth">
+					<nav id="m-menu">
+						<div>
+							
+						</div>
+					</nav>
+				</aside>
+			</main>
 		</div>
 	</body>
 </html>
