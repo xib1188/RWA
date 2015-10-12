@@ -22,12 +22,7 @@ a{text-decoration:none;}
 
 /* <-------  primary styles -------> */
 
-.pagewidth{
-	margin-left: auto;
-	margin-right: auto;
-	padding: 0px;
-	width: 960px;	
-}
+
 	
 #container{
 	width:100%;
@@ -51,14 +46,21 @@ a{text-decoration:none;}
 /* image */
 #h-div-image{
 	float:left;
-	width:105px;
-	height:100px;
+	width:120px;
+	height:110px;
 	background-color: #2F2D2A ;
-	border-bottom-right-radius: 50px;
-	border-bottom:4px solid #DA3838;
+	border-bottom-right-radius: 100px;
+	border-bottom: 4px solid #DA3838;
 	box-shadow: 0px 2px 0px #BABABA;
+	border-bottom-left-radius: 60px;
 }
 
+#h-div-title{
+	margin-left: 150px;
+	margin-right: 5%;
+	padding: 7px 0px 0px;
+	width: auto;	
+}
 /* title */
 #h-div-title > h1{
 	font-family: monospace;
@@ -107,6 +109,27 @@ a{text-decoration:none;}
 
 #container > main > aside{position:relative;}
 
+/*left menu*/
+#mleft-menu{
+	display:none;
+	float: left;
+	width: 150px;
+	height:100%;
+}
+
+/*main section*/
+#m-section{
+	width: 960px;
+	padding:0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#m-menu{
+	float: left;
+	position: relative;
+	width: 100%;	
+}
 
 #m-menu > div{
 	float:left;
@@ -119,13 +142,13 @@ a{text-decoration:none;}
 	width:280px;
 	height:280px;
 	cursor:pointer;
-	transition: all 0.3s ease-in 0s;
+	transition: background,border 0.3s ease-in 0s;
 }
 
 #m-menu > div:nth-child(3n+1){
-	clear:left;
-	margin-left:0px;
-}
+		clear:left;
+		margin-left:0px;
+	}
 
 #m-menu > div:hover{
 	background: #BABABA repeat scroll 0% 0%;
@@ -156,14 +179,25 @@ a{text-decoration:none;}
 
 
 .mnd-header{
-	display:none;
-	position: relative;
-	background: rgba(39, 33, 35, 0.9) none repeat scroll 0% 0%;
-	/*padding: 15px 0px;*/
+	position: absolute;
+	opacity:0.0;
+	background: url("../images/b2.png");
 	text-align: center;
-	transition: all 0.1s ease-in 0s;
-	width: 280px;
-	height: 100px;
+	transition: opacity 0.4s ease-in 0s;
+	width: 296px;
+	height: 148px;
+	top: 148px; 
+	z-index: 2;
+	margin-left: -10px;
+	border-bottom-left-radius: 150px;
+	border-bottom-right-radius: 150px;
+	border: 2px solid #2F2D2A;
+	border-top:none;
+}
+
+.mnd-header > h2{
+	padding-top: 65px;
+	colour: #2F2D2A;
 }
 
 
@@ -171,10 +205,104 @@ a{text-decoration:none;}
 /* **************@MEDIA TYPES************** */
 /* **************************************** */
 
+
 @media only screen and (max-width: 960px){
-    .pagewidth {
-        width: 90%;
-        padding: 0px 5%;
-    }
+   	#m-section{
+		padding: 0px 5%;
+		width: 90%;
+	}
+	
+	#m-menu{
+		float: none;
+		margin: 0px auto;
+		position: relative;
+		width: 630px;
+	}
+	
+   	#m-menu > div:nth-child(3n+1){
+		clear:none;
+		margin-left:30px;
+	}
+
+    #m-menu > div:nth-child(2n+1){
+		clear:left;
+		margin-left:0px;
+	}
+	
+	
 }
 
+@media only screen and (max-width: 690px){
+	#m-menu{
+		float: left;
+		margin: 0px,;
+		width: 100%;
+	}
+	#m-menu > div:nth-child(3n+1){
+		clear:left;
+		margin-left:0px;
+	}
+	#m-menu > div{
+		display:block;
+		box-sizing: border-box;
+		background: none;
+		border-width: 1px 0px;
+		border-style: dotted;
+		border-color: #DCDCDC;
+		border-radius: 150px;
+		float: left;
+		margin: 0px 0px 10px;
+		overflow: hidden;
+		padding: 0px;
+		position: relative;
+		width: 100%;
+		height: auto;
+		transition:none;
+	}
+	.mnd-header{
+		padding:0px;
+		margin:0px;
+		left: 45%;
+		top: 20%;
+		width: 55%;
+		height: 60%;
+		transition:none;
+	}
+	
+	.mnd-div{
+		box-sizing: border-box;
+		background: #D0D0D0 none repeat scroll 0% 0%;
+		border: 1px solid #B9B9B9;
+		border-radius: 50%;
+		padding: 4px;
+		position: absolute;
+		width: 40%;
+		height: auto;		
+	}
+	.mnd-div > img{
+		margin-bottom: -5px;
+		transition:none;
+	}
+	.mnd-div-x{
+	box-sizing: border-box;
+		background: #D0D0D0 none repeat scroll 0% 0%;
+		border: 1px solid #B9B9B9;
+		border-radius: 50%;
+		padding: 4px;
+		position: relative;
+		width: 40%;
+		height: auto;	
+	}
+	.mnd-div-x > img{
+		margin-bottom: -5px;
+		transition:none;
+	}
+	.mnd-header{
+		background: none;
+		transition: none;
+		border: none;
+	}
+	.mnd-header > h2{
+		padding-top: 0px;
+	}
+}

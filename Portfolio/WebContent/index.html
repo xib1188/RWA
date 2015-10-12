@@ -15,10 +15,10 @@
 			<header>
 				<div id="h-div-image">
 					<a title="Main page" href="">
-						<img alt="home" src="images/ene.png" onmouseover="chg(this,'src','images/ene_hov.png');" onmouseout="chg(this,'src','images/ene.png');">
+						<img alt="home" src="images/ene.png" onmouseover="chg(this,'src','images/ene_hov.png');" onmouseout="chg(this,'src','images/ene.png');" >
 					</a>
 				</div>
-				<div id="h-div-title" class="pagewidth" style="padding-top:7px">
+				<div id="h-div-title">
 					<h1 id="h-title" class="rs">Xavier Ibáñez</h1>
 					<nav>
 						<a id="hsb-coll-link" class="rs" title="Social" href="#" >
@@ -38,12 +38,14 @@
 				</div>
 			</header>
 			<main>
-				<aside class="pagewidth">
-					<nav id="m-menu">
-						<div onmouseover="chg(this.children[2],'style','opacity:1');" onmouseout="chg(this.children[2],'style','opacity:0');">
+				<aside id="mleft-menu">
+				</aside>
+				<section id=m-section>
+					<nav id="m-menu" class="rs">
+						<div onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);">
 							<header class="mnd-header">
-								<h2>hola</h2>
-								<p>prueba</p>
+								<h2>WHO I AM</h2>
+								<p>personal statement</p>
 							</header>
 							<div class="mnd-div">
 								<img alt="" src="images/myf_bw.png">
@@ -52,10 +54,10 @@
 								<img alt="" src="images/myf.png">
 							</div>
 						</div>
-						<div onmouseover="chg(this.children[2],'style','opacity:1');" onmouseout="chg(this.children[2],'style','opacity:0');">
+						<div onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);">
 							<header class="mnd-header">
-								<h2></h2>
-								<p></p>
+								<h2>WHAT I'VE DONE</h2>
+								<p>my experiences</p>
 							</header>
 							<div class="mnd-div">
 								<img alt="" src="images/bowl_bw.png">
@@ -64,10 +66,10 @@
 								<img alt="" src="images/bowl.png">
 							</div>
 						</div>
-						<div onmouseover="chg(this.children[2],'style','opacity:1');" onmouseout="chg(this.children[2],'style','opacity:0');">
+						<div onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);">
 							<header class="mnd-header">
-								<h2></h2>
-								<p></p>
+								<h2>WHAT I KNOW</h2>
+								<p>my skills</p>
 							</header>
 							<div class="mnd-div">
 								<img alt="" src="images/micro_bw.png">
@@ -76,10 +78,10 @@
 								<img alt="" src="images/micro.png">
 							</div>
 						</div>
-						<div onmouseover="chg(this.children[2],'style','opacity:1');" onmouseout="chg(this.children[2],'style','opacity:0');">
+						<div onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);">
 							<header class="mnd-header">
-								<h2></h2>
-								<p></p>
+								<h2>WHAT I'VE LEARNED</h2>
+								<p>my education</p>
 							</header>
 							<div class="mnd-div">
 								<img alt="" src="images/education_bw.png">
@@ -88,10 +90,10 @@
 								<img alt="" src="images/education.png">
 							</div>
 						</div>
-						<div onmouseover="chg(this.children[2],'style','opacity:1');" onmouseout="chg(this.children[2],'style','opacity:0');">
+						<div onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);">
 							<header class="mnd-header">
-								<h2></h2>
-								<p></p>
+								<h2>WHAT I LIKE</h2>
+								<p>hobbies & interests</p>
 							</header>
 							<div class="mnd-div">
 								<img alt="" src="images/hobby_bw.png">
@@ -100,10 +102,10 @@
 								<img alt="" src="images/hobby.png">
 							</div>
 						</div>
-						<div onmouseover="chg(this.children[2],'style','opacity:1');" onmouseout="chg(this.children[2],'style','opacity:0');">
+						<div onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);">
 							<header class="mnd-header">
-								<h2></h2>
-								<p></p>
+								<h2>WHAT I'VE WON</h2>
+								<p>honours & awards</p>
 							</header>
 							<div class="mnd-div">
 								<img alt="" src="images/awards_bw.png">
@@ -113,7 +115,19 @@
 							</div>
 						</div>
 					</nav>
-				</aside>
+					<article>
+					</article>
+					<article>
+					</article>
+					<article>
+					</article>
+					<article>
+					</article>
+					<article>
+					</article>
+					<article>
+					</article>
+				</section>
 			</main>
 		</div>
 	</body>

@@ -5,7 +5,8 @@
 var hashtable = {
 		"h-title": fHTitle,
 		"hsb-coll-link": fSocialBtnCollLink,
-		"hsb-coll": fSocialBtnColl
+		"hsb-coll": fSocialBtnColl,
+		"m-menu": f690mainMenuFormat
 };
 
 /* ****** LISTENERS ***** */
@@ -41,6 +42,15 @@ function chg(element,attr,value) {
 	element.setAttribute(attr, value);
 }
 
+function dMenuOver(elem){
+	chg(elem.children[0],"style","opacity:0.8");
+	chg(elem.children[2],"style","opacity:1");
+}
+
+function dMenuOut(elem){
+	chg(elem.children[0],"style","opacity:0");
+	chg(elem.children[2],"style","opacity:0");
+}
 
 /* ****** ID-SPECIFIC FUNCTIONS ****** */
 /* used to change CSS and HTML element values */ 
@@ -49,8 +59,9 @@ function fHTitle(event,value){
 	/* this function change the header's title when windowsize < 565px */
 	//ID = h-title
 	var element = document.getElementById("h-title");
-	if(value < 580){
-		element.innerHTML = "X.I.";
+	if(value < 720){
+		if(value < 380)element.innerHTML = "";
+		else element.innerHTML = "X.I";
 	}
 	else element.innerHTML = "Xavier Ibáñez";	
 }
@@ -65,7 +76,7 @@ function fSocialBtnCollLink(event,value){
 	var d1 = "inline"
 	var d2 = "none";
 	
-	if(value < 690){
+	if(value < 960){
 		d1 = "none";
 		d2 = "inline";
 		parent.setAttribute("style","border: none;");
@@ -86,7 +97,7 @@ function fSocialBtnColl(event,value){
 	var element = document.getElementById("hsb-coll");
 	var pparent = element.parentNode.parentNode;
 	var d1 = "none";
-	if(value < 690){
+	if(value < 960){
 		if(element == event.target && document.getElementById("hsb-cont-link").style.display == "none"){
 			d1 = "block";
 			pparent.setAttribute("style","border-radius: 10px;" +
@@ -107,3 +118,20 @@ function fSocialBtnColl(event,value){
 	}
 }
 
+function f690mainMenuFormat(event,value){
+	var element = document.getElementById("m-menu");
+	if(value < 690){
+		for(var i = 0; i < element.children.length; i++){
+			element.children[i].setAttribute("onmouseover","chg(this.children[2],'style','opacity:1')");
+			element.children[i].setAttribute("onmouseout","chg(this.children[2],'style','opacity:0')");
+			element.children[i].children[0].style.opacity = 1;
+		}
+	}
+	else{
+		for(var i = 0; i < element.children.length; i++){
+			element.children[i].setAttribute("onmouseover","dMenuOver(this)");
+			element.children[i].setAttribute("onmouseout","dMenuOut(this)");
+			element.children[i].children[0].style.opacity = 0;
+		}
+	}
+}
