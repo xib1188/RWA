@@ -1,7 +1,8 @@
+/*****************************/
+/* <-- GLOBAL & DEFAULTS --> */
+/*****************************/
 
-/* <-------  globals & defaults -------> */
-
-*{ margin:0px; padding:0px; }
+*{ margin:0px; padding:0px;}
 
 body{ font-family: sans-serif; color: #2F2D2A  ;}
 
@@ -18,11 +19,6 @@ h1 {
 }
 
 a{text-decoration:none;}
-
-
-/* <-------  primary styles -------> */
-
-
 	
 #container{
 	width:100%;
@@ -48,6 +44,7 @@ a{text-decoration:none;}
 	float:left;
 	width:120px;
 	height:110px;
+	padding-left:10px;
 	background-color: #2F2D2A ;
 	border-bottom-right-radius: 100px;
 	border-bottom: 4px solid #DA3838;
@@ -55,13 +52,22 @@ a{text-decoration:none;}
 	border-bottom-left-radius: 60px;
 }
 
+#h-div-image img{
+	border-radius: 100px;
+}
+#h-div-image img:hover{
+	cursor:pointer;
+}
+
+
+/* title */
 #h-div-title{
 	margin-left: 150px;
 	margin-right: 5%;
 	padding: 7px 0px 0px;
 	width: auto;	
 }
-/* title */
+
 #h-div-title > h1{
 	font-family: monospace;
 	font-size: 40px;
@@ -69,7 +75,6 @@ a{text-decoration:none;}
 	letter-spacing: 8px;
 	margin-left:25px;
 	text-shadow: 2px 2px 4px #000000;
-
 }
 
 
@@ -102,22 +107,12 @@ a{text-decoration:none;}
 #container > main{
 	width:100%;
 	position:absolute;
-	padding-top:105px;
+	padding-top:120px;
 	background-image:url('../images/b1.png');
 	background-repeat:repeat;
 }
 
-#container > main > aside{position:relative;}
-
-/*left menu*/
-#mleft-menu{
-	display:none;
-	float: left;
-	width: 150px;
-	height:100%;
-}
-
-/*main section*/
+/* ****main menu section**** */
 #m-section{
 	width: 960px;
 	padding:0px;
@@ -146,15 +141,16 @@ a{text-decoration:none;}
 }
 
 #m-menu > div:nth-child(3n+1){
-		clear:left;
-		margin-left:0px;
-	}
+	clear:left;
+	margin-left:0px;
+}
 
 #m-menu > div:hover{
 	background: #BABABA repeat scroll 0% 0%;
 	border: 2px solid #2F2D2A;	
 }
 
+/*images*/
 .mnd-div,.mnd-div-x{
 	position:absolute;
 	margin:10px;
@@ -177,7 +173,7 @@ a{text-decoration:none;}
 	transition: all 0.3s ease-in 0s;
 }
 
-
+/*images' headers*/
 .mnd-header{
 	position: absolute;
 	opacity:0.0;
@@ -200,6 +196,96 @@ a{text-decoration:none;}
 	colour: #2F2D2A;
 }
 
+
+/* ****secondary left menu**** */
+#s-menu{
+	display: none;
+	position: fixed;
+	float: left;
+	width: 150px;
+	height: 100%;
+	top:70px;	
+}
+#s-menu > nav > header{
+	height: 55px;
+	border-bottom: 1px dotted #BABABA;
+	background:#2F2D2A repeat scroll 0% 0%;
+	border-top-right-radius: 10px;
+	border:1px solid #BABABA;
+	border-left:none;
+}
+#lm-img{
+	display:none;
+	margin-right:5px;
+	margin-top:30px;
+	width:22px;
+	float:right;
+}
+
+#lm-img:hover{
+	cursor:pointer;
+}
+
+
+#s-menu > nav > a{
+	width: 150px;
+	border: 1px solid white;
+	display: block;
+	text-align: center;
+	padding: 10px 0px;
+	color:#da3838;
+	font-weight: bold;
+	margin: 5px 0;
+	border-radius: 20px;
+	background:#2F2D2A repeat scroll 0% 0%;
+	
+}
+
+
+#art-section{
+	margin: 0px 0% 0px 150px;	
+}
+
+#art-section > article{
+	display: none;
+	margin:20px;
+	border: 5px solid;
+	border-radius: 20px;
+	padding: 5px 20px;
+	background:#bababa;
+	text-align: justify;
+	line-height:160%;
+}
+
+#art-section > article > header > img{
+	width: 150px;
+	border-radius: 150px;
+	margin-top: -70px;
+	margin-left: -25px;
+	margin-right: 20px;
+	float: left;
+	border: 5px solid;
+}
+
+#art-section > article > header > h2{
+	padding-top:10px;
+}
+#art-section > article > header > h3{
+	padding-top:5px;
+	padding-bottom:10px;
+	margin-left: 130px;
+	border-bottom: 1px dotted #2f2d2a;
+	font-size: 15px;
+}
+
+#art-section > article > header +p{
+	padding-top:30px;	
+}
+
+#art-section > article > p{
+	padding-top:10px;
+	margin:0px 20px;
+}
 
 /* **************************************** */
 /* **************@MEDIA TYPES************** */
@@ -304,5 +390,36 @@ a{text-decoration:none;}
 	}
 	.mnd-header > h2{
 		padding-top: 0px;
+	}
+	
+	#art-section{
+		margin: 0px;	
+	}
+	#art-section > article > header > img{
+		width: 75px;
+		border-radius: 75px;
+		margin-top: -15px;
+		margin-left: -40px;
+		margin-right: 15px;
+		float: left;
+		border: 5px solid;
+	}
+	#lm-img{
+		display:block;
+		-ms-transform: rotate(0deg); /* IE 9 */
+	    -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+	    transform: rotate(0deg);
+	}
+	#art-section > article{
+		line-height:100%;
+	}
+	#art-section > article > header +p{
+		padding-top:20px;	
+	}
+	#art-section > article > p{
+		margin:0px 5px;
+	}
+	#art-section > article > header > h3{
+		margin-left:0px;
 	}
 }

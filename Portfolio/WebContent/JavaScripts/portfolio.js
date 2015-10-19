@@ -6,9 +6,12 @@ var hashtable = {
 		"h-title": fHTitle,
 		"hsb-coll-link": fSocialBtnCollLink,
 		"hsb-coll": fSocialBtnColl,
-		"m-menu": f690mainMenuFormat
+		"m-menu": f690mainMenuFormat,
+		"lm-img": fLeftMenu
 };
 
+var activeArticle = 0;
+var leftMenu = false;
 /* ****** LISTENERS ***** */
 
 document.addEventListener("click",anyWhereClick);
@@ -52,6 +55,9 @@ function dMenuOut(elem){
 	chg(elem.children[2],"style","opacity:0");
 }
 
+function reload(){
+	location.reload(true);
+}
 /* ****** ID-SPECIFIC FUNCTIONS ****** */
 /* used to change CSS and HTML element values */ 
 
@@ -59,7 +65,7 @@ function fHTitle(event,value){
 	/* this function change the header's title when windowsize < 565px */
 	//ID = h-title
 	var element = document.getElementById("h-title");
-	if(value < 720){
+	if(value <= 720){
 		if(value < 380)element.innerHTML = "";
 		else element.innerHTML = "X.I";
 	}
@@ -76,10 +82,10 @@ function fSocialBtnCollLink(event,value){
 	var d1 = "inline"
 	var d2 = "none";
 	
-	if(value < 960){
+	if(value <= 960){
 		d1 = "none";
 		d2 = "inline";
-		parent.setAttribute("style","border: none;");
+		parent.style.border = "none";
 		element.firstElementChild.setAttribute("src","images/collapse.png");
 		element.firstElementChild.setAttribute("onmouseout","chg(this,'src','images/collapse.png')");
 	}
@@ -97,7 +103,7 @@ function fSocialBtnColl(event,value){
 	var element = document.getElementById("hsb-coll");
 	var pparent = element.parentNode.parentNode;
 	var d1 = "none";
-	if(value < 960){
+	if(value <= 960){
 		if(element == event.target && document.getElementById("hsb-cont-link").style.display == "none"){
 			d1 = "block";
 			pparent.setAttribute("style","border-radius: 10px;" +
@@ -120,7 +126,7 @@ function fSocialBtnColl(event,value){
 
 function f690mainMenuFormat(event,value){
 	var element = document.getElementById("m-menu");
-	if(value < 690){
+	if(value <= 690){
 		for(var i = 0; i < element.children.length; i++){
 			element.children[i].setAttribute("onmouseover","chg(this.children[2],'style','opacity:1')");
 			element.children[i].setAttribute("onmouseout","chg(this.children[2],'style','opacity:0')");
@@ -134,4 +140,78 @@ function f690mainMenuFormat(event,value){
 			element.children[i].children[0].style.opacity = 0;
 		}
 	}
+}
+
+function fLeftMenu(event,value){
+	var disp;
+	var rot;
+	var ok = false;
+	if((ok = (event == null && value <= 690))){
+		disp = "none";
+		rot = "rotate(0deg)";
+	}
+	else if(event.target != document.getElementById("lm-img")){
+		if((ok = (value <= 690 && leftMenu))){
+			disp = "none";
+			rot = "rotate(0deg)";
+		}
+		else if((ok = (value >690 && !leftMenu))){
+			disp = "block";
+			rot = "rotate(180deg)";
+		}
+	}
+	if(ok){
+		for(var i = 1; i <= 6; i++){
+			document.getElementById("a"+i).style.display=disp;
+		}
+		document.getElementById("lm-img").style.msTransform = rot;
+		document.getElementById("lm-img").style.webkitTransform = rot;
+		document.getElementById("lm-img").style.transform = rot;
+		leftMenu = !leftMenu;
+	}
+}
+
+function openArticle(elem,artic){
+	var parent = elem.parentNode;
+	var pparent = parent.parentNode;
+
+	activeArt(artic.slice(2,3));
+	
+	pparent.style.display = "none";
+	document.getElementById("s-menu").style.display = "block";
+	
+}
+
+function activeArt(currentArt){
+	var newElem = document.getElementById("a"+currentArt);
+ 	if(activeArticle != 0){
+ 		var activeElem = document.getElementById("a"+activeArticle);
+		document.getElementById("ar"+activeArticle).style.display = "none";
+		activeElem.style.backgroundColor ="#2F2D2A";
+		activeElem.setAttribute("onmouseout","chg(this,'style','background-color:#2F2D2A')");
+		activeElem.style.cursor = "pointer";
+	}
+	document.getElementById("ar"+currentArt).style.display = "block";
+	newElem.style.backgroundColor ="#bababa";
+	newElem.setAttribute("onmouseout","");
+	newElem.style.cursor = "default";
+	
+	activeArticle = currentArt;
+}
+
+function leftMenuDropDown(){
+	var disp = "none";
+	var rot = "rotate(0deg)";
+	if(!leftMenu){
+		disp = "block";
+		rot = "rotate(180deg)";
+	}
+	for(var i = 1; i <= 6; i++){
+		document.getElementById("a"+i).style.display=disp;
+	}
+	document.getElementById("lm-img").style.msTransform = rot;
+	document.getElementById("lm-img").style.webkitTransform = rot;
+	document.getElementById("lm-img").style.transform = rot;
+	
+	leftMenu = !leftMenu;
 }

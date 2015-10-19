@@ -14,9 +14,7 @@
 		<div id="container">
 			<header>
 				<div id="h-div-image">
-					<a title="Main page" href="">
-						<img alt="home" src="images/ene.png" onmouseover="chg(this,'src','images/ene_hov.png');" onmouseout="chg(this,'src','images/ene.png');" >
-					</a>
+					<img title="Main page" alt="home" src="images/ene.png" onmouseover="chg(this,'src','images/ene_hov.png');" onmouseout="chg(this,'src','images/ene.png');" onclick="reload();">
 				</div>
 				<div id="h-div-title">
 					<h1 id="h-title" class="rs">Xavier Ibáñez</h1>
@@ -38,11 +36,90 @@
 				</div>
 			</header>
 			<main>
-				<aside id="mleft-menu">
+<!-- left menu (initially hidden)-->
+				<aside id="s-menu">
+					<nav>
+						<header>
+							<img id="lm-img" class="rs c-click" src="images/red_arrow.png" onmouseover="chg(this,'src','images/arrow.png')" onmouseout="chg(this,'src','images/red_arrow.png')" onclick="leftMenuDropDown(false)">
+						</header>
+						<a id="a1" href="#" onclick="activeArt(1)" onmouseover="chg(this,'style','background-color:#bababa')" onmouseout="chg(this,'style','background-color:#2F2D2A')"><span>WHO I AM</span></a>
+						<a id="a2" href="#" onclick="activeArt(2)" onmouseover="chg(this,'style','background-color:#bababa')" onmouseout="chg(this,'style','background-color:#2F2D2A')"><span>WHAT I'VE DONE</span></a>
+						<a id="a3" href="#" onclick="activeArt(3)" onmouseover="chg(this,'style','background-color:#bababa')" onmouseout="chg(this,'style','background-color:#2F2D2A')"><span>WHAT I KNOW</span></a>
+						<a id="a4" href="#" onclick="activeArt(4)" onmouseover="chg(this,'style','background-color:#bababa')" onmouseout="chg(this,'style','background-color:#2F2D2A')"><span>WHAT I'VE LEARNED</span></a>
+						<a id="a5" href="#" onclick="activeArt(5)" onmouseover="chg(this,'style','background-color:#bababa')" onmouseout="chg(this,'style','background-color:#2F2D2A')"><span>WHAT I LIKE</span></a>
+						<a id="a6" href="#" onclick="activeArt(6)" onmouseover="chg(this,'style','background-color:#bababa')" onmouseout="chg(this,'style','background-color:#2F2D2A')"><span>WHAT I'VE WON</span></a>
+					</nav>
 				</aside>
+<!-- articles (initially hidden)-->
+				<section id="art-section">
+					<article id="ar1">
+						<header>
+							<img alt="" src="images/myf.png">
+							<h2>WHO I AM</h2>
+							<h3>personal statement</h3>
+						</header>
+						<p>
+							My name is Xavier Ibáñez Barrios and I am from Spain. I am sure you are now thinking about what is that letter: "ñ", and <a title="how the letter 'ñ' sounds" href="https://www.youtube.com/watch?v=PKh9vaJmxh8" target="_blank">how it sounds</a>.
+							Well, this is one of the 27 letters of the spanish alphabet and it is as important as the other 26. There are a lot of words containing it,
+							for example: 'Spain' in spanish is 'España', 'chestnut' in spanish is 'castaña' or 'mountain' in spanish is 'montaña'.<br> As you can see, my first surname contains the 'ñ' sound and I supouse that it is the reason why all people who talk in english
+							prefer to use my second surname rather than my first, the 'ñ' scares them. 
+						</p>
+						<p>
+							In Spain is said that surnames ended with "-ez" mean "son of" so Ibáñez means "Iban's son". There are a lot of common spanish surnames of this style like "González" that means "Gonzalo's son" or "Fernández" that means "Fernando's son". But if you go to spain
+							and ask about "Ibáñez" surname to someone, it is certain that most of people will say to you something like "Ibáñez is the <a title="Mort & phil wikipage" href="https://en.wikipedia.org/wiki/Mort_%26_Phil" target="_blank">Mortadelo & Filemon</a> creator!".
+							I have more things in common with <a title="Francisco Ibañez wikipage" href="https://en.wikipedia.org/wiki/Francisco_Ib%C3%A1%C3%B1ez_Talavera" target="_blank">Francisco Ibáñez</a> than the surname, I am as crazy as his creations and I was born in Barcelona as well.
+						</p>
+						<p>
+							What can I say about my own city <a title="BCN" href="https://en.wikipedia.org/wiki/Barcelona" target="_blank">Barcelona</a>? It is an awesome beautiful city, It has the sea at the front and two marvelous mountains in the back. The weather is Mediterranean so it is perfect
+							for walking both day and night, winter and summer. There are a lot of interesting turistic sites you may visit, and you can also taste all the typical spanish food anywhere you go.
+						</p>
+						<p>
+							I think in the end I have not talked much about me but if you are interested in getting to know me more thoroughly, you can contact with me through the links available on the top of this webpage.
+						</p>
+					</article>
+					<article id="ar2">
+						<header>
+							<img alt="" src="images/bowl.png">
+							<h2>WHAT I'VE DONE</h2>
+							<h3>my experiences</h3>
+						</header>
+					</article>
+						<p>
+							
+						</p>
+					<article id="ar3">
+						<header>
+							<img alt="" src="images/micro.png">
+							<h2>WHAT I KNOW</h2>
+							<h3>my skills</h3>
+						</header>
+					</article>
+					<article id="ar4">
+						<header>
+							<img alt="" src="images/education.png">
+							<h2>WHAT I'VE LEARNED</h2>
+							<h3>my education</h3>
+						</header>
+					</article>
+					<article id="ar5">
+						<header>
+							<img alt="" src="images/hobby.png">
+							<h2>WHAT I LIKE</h2>
+							<h3>hobbies & interests</h3>
+						</header>
+					</article>
+					<article id="ar6">
+						<header>
+							<img alt="" src="images/awards.png">
+							<h2>WHAT I'VE WON</h2>
+							<h3>honours & awards</h3>
+						</header>
+					</article>
+				</section>
+<!-- first menu -->				
 				<section id=m-section>
 					<nav id="m-menu" class="rs">
-						<div onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);">
+						<div onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);" onclick="openArticle(this,'ar1');">
 							<header class="mnd-header">
 								<h2>WHO I AM</h2>
 								<p>personal statement</p>
@@ -54,7 +131,7 @@
 								<img alt="" src="images/myf.png">
 							</div>
 						</div>
-						<div onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);">
+						<div onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);" onclick="openArticle(this,'ar2');">
 							<header class="mnd-header">
 								<h2>WHAT I'VE DONE</h2>
 								<p>my experiences</p>
@@ -66,7 +143,7 @@
 								<img alt="" src="images/bowl.png">
 							</div>
 						</div>
-						<div onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);">
+						<div onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);" onclick="openArticle(this,'ar3');">
 							<header class="mnd-header">
 								<h2>WHAT I KNOW</h2>
 								<p>my skills</p>
@@ -78,7 +155,7 @@
 								<img alt="" src="images/micro.png">
 							</div>
 						</div>
-						<div onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);">
+						<div onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);" onclick="openArticle(this,'ar4');">
 							<header class="mnd-header">
 								<h2>WHAT I'VE LEARNED</h2>
 								<p>my education</p>
@@ -90,7 +167,7 @@
 								<img alt="" src="images/education.png">
 							</div>
 						</div>
-						<div onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);">
+						<div onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);" onclick="openArticle(this,'ar5');">
 							<header class="mnd-header">
 								<h2>WHAT I LIKE</h2>
 								<p>hobbies & interests</p>
@@ -102,7 +179,7 @@
 								<img alt="" src="images/hobby.png">
 							</div>
 						</div>
-						<div onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);">
+						<div onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);" onclick="openArticle(this,'ar6');">
 							<header class="mnd-header">
 								<h2>WHAT I'VE WON</h2>
 								<p>honours & awards</p>
@@ -115,20 +192,11 @@
 							</div>
 						</div>
 					</nav>
-					<article>
-					</article>
-					<article>
-					</article>
-					<article>
-					</article>
-					<article>
-					</article>
-					<article>
-					</article>
-					<article>
-					</article>
+	
 				</section>
 			</main>
+			<footer>
+			</footer>
 		</div>
 	</body>
 </html>
