@@ -249,9 +249,10 @@ a{text-decoration:none;}
 #art-section > article{
 	display: none;
 	margin:20px;
+	padding: 0px 20px;
 	border: 5px solid;
 	border-radius: 20px;
-	padding: 5px 20px;
+	padding: 0px 20px;
 	background:#bababa;
 	text-align: justify;
 	line-height:160%;
@@ -284,8 +285,27 @@ a{text-decoration:none;}
 
 #art-section > article > p{
 	padding-top:10px;
-	margin:0px 20px;
 }
+
+#ar2 > div{
+	border-top: 1px dotted #2f2d2a;
+	margin-top: 15px;
+	padding-top: 15px;
+	padding-left: 5%;
+}
+
+#ar2 > div > img{
+	float:right;
+	margin: 55px 5% 0px 0px;
+	height: 170px;
+}
+#ar2 > div > ul{
+	margin: 10px 20px 25px;
+}
+#ar2 > div > p > span{
+	font-weight: bold;
+}
+
 
 /* **************************************** */
 /* **************@MEDIA TYPES************** */
@@ -315,7 +335,9 @@ a{text-decoration:none;}
 		margin-left:0px;
 	}
 	
-	
+	#ar2 > div > img{
+		display:none;
+	}
 }
 
 @media only screen and (max-width: 690px){
@@ -393,7 +415,8 @@ a{text-decoration:none;}
 	}
 	
 	#art-section{
-		margin: 0px;	
+		margin: 0px;
+		padding:0px 5px;	
 	}
 	#art-section > article > header > img{
 		width: 75px;
@@ -411,15 +434,19 @@ a{text-decoration:none;}
 	    transform: rotate(0deg);
 	}
 	#art-section > article{
-		line-height:100%;
+		text-align:left;
 	}
 	#art-section > article > header +p{
 		padding-top:20px;	
 	}
-	#art-section > article > p{
-		margin:0px 5px;
-	}
+	
 	#art-section > article > header > h3{
 		margin-left:0px;
 	}
-}
+	
+	#ar2 > div > ul{
+		margin: 10px 5px 25px;
+	}
+	#ar2 > div{
+		padding-left:0px;
+	}
