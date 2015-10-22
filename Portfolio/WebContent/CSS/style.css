@@ -295,9 +295,9 @@ body > main{
 	    columns: auto 2;
 	    text-align: left;}
 
-	#ar3 > ul, #ar4 > ul, #ar5 > ul{margin: 20px 20px 25px;}
+	#ar3 > ul, #ar4 > ul, #ar5 > ul, #ar6 > ul{margin: 20px 20px 25px;}
 		
-		#ar3 > ul > li, #ar4 > ul > li, #ar5 > ul > li{margin-bottom: 10px;}	
+		#ar3 > ul > li, #ar4 > ul > li, #ar5 > ul > li, #ar6 > ul > li{margin-bottom: 10px;}	
 /* > end specific styles per article < */
 /* > end main articles section (initially hidden)< */		
 		
@@ -502,4 +502,10 @@ body > footer{
     	margin-right: 10%;
     	margin-left: 10%;
     	width: 80%;
+	}
+	
+	#fs1{
+		margin-right: 10%;
+    	margin-left: 10%;
+	}
 }
