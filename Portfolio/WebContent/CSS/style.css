@@ -2,356 +2,407 @@
 /* <-- GLOBAL & DEFAULTS --> */
 /*****************************/
 
-*{ margin:0px; padding:0px;}
+*{ margin: 0px; padding: 0px;}
+
+a{text-decoration: none;}
 
 body{ font-family: sans-serif; color: #2F2D2A  ;}
 
-header{	width: 100%;}
+header, footer, main, body{
+	width: 100%;
+	float: left;
+}
+
+header, footer{
+	background: #2F2D2A;
+}
 
 h1 {
-	font-family: "LeagueGothicRegular",helvetica,arial,sans-serif;
-	font-size: 28px;
+	font-family: monospace;
+	font-size: 40px;
 	letter-spacing: 1px;
-	margin: 0px;
-	padding: 0px;
 	text-transform: uppercase;
 	display: inline;
 }
-
-a{text-decoration:none;}
-	
-#container{
-	width:100%;
-	padding: 0px;
-}
-
 
 /*****************************/
 /* <-------  HEADER -------> */
 /*****************************/
 
-#container > header{
-	background: #2F2D2A  ;
+body > header{
 	border-bottom: 4px solid #DA3838 ;
 	box-shadow: 0px 2px 0px #BABABA;
 	height: 60px;
 	position: fixed;	
-	z-index: 5;
-}
+	z-index: 5;}
 
-/* image */
-#h-div-image{
-	float:left;
-	width:120px;
-	height:110px;
-	padding-left:10px;
-	background-color: #2F2D2A ;
-	border-bottom-right-radius: 100px;
-	border-bottom: 4px solid #DA3838;
-	box-shadow: 0px 2px 0px #BABABA;
-	border-bottom-left-radius: 60px;
-}
+/* > header figure < */
+	#bh-figure{
+		float: left;
+		width: 120px;
+		height: 110px;
+		padding-left: 10px;
+		background-color: #2F2D2A ;
+		border-bottom-right-radius: 100px;
+		border-bottom: 4px solid #DA3838;
+		box-shadow: 0px 2px 0px #BABABA;
+		border-bottom-left-radius: 60px;}
 
-#h-div-image img{
-	border-radius: 100px;
-}
-#h-div-image img:hover{
-	cursor:pointer;
-}
+		#bh-figure img{border-radius: 100px;}
+		#bh-figure img:hover{cursor: pointer;}
+/* > end header figure < */
 
 
-/* title */
-#h-div-title{
-	margin-left: 150px;
-	margin-right: 5%;
-	padding: 7px 0px 0px;
-	width: auto;	
-}
+/* > header section < */
+	#bh-section{
+		margin-left: 150px;
+		margin-right: 5%;
+		padding: 7px 0px 0px;
+		width: auto;}
 
-#h-div-title > h1{
-	font-family: monospace;
-	font-size: 40px;
-	color: #DA3838;
-	letter-spacing: 8px;
-	margin-left:25px;
-	text-shadow: 2px 2px 4px #000000;
-}
+	/* title */
+		#bh-section > h1{
+			color: #DA3838;
+			letter-spacing: 8px;
+			margin-left: 25px;
+			text-shadow: 2px 2px 4px #000000;}
+	/* end title */
 
+	/* social-navigation */
+		#bh-section > nav{
+			float: right;
+			padding-top: 6px;
+			padding-right: 10px;}
 
-/* social-navigation */
-#h-div-title > nav{
-	float: right;
-	padding-top: 6px;
-	padding-right:10px;
-}
+			#bh-section > nav img{
+				width: 35px;
+				border-radius: 10px;
+				background-color: rgb(218, 56, 56);
+				border: 1px solid rgb(186, 186, 186);
+				margin-left: 10px;
+				cursor:pointer;
+				box-shadow: 2px 2px 4px #000;} 
 
-#h-div-title > nav img{
-	width: 35px;
-	border-radius: 10px;
-	background-color: rgb(218, 56, 56);
-	border: 1px solid rgb(186, 186, 186);
-	margin-left: 10px;
-	cursor:pointer;
-	box-shadow: 2px 2px 4px #000;
-} 
+			#bhsn-a1{ display: none;}
+	/* end social-navigation */
+/* > end header section < */
 
-#hsb-coll-link{
-	display: none;
-}
 
 
 /*****************************/
 /* <--------  MAIN --------> */
 /*****************************/
 
-#container > main{
-	width:100%;
-	position:absolute;
-	padding-top:120px;
-	background-image:url('../images/b1.png');
-	background-repeat:repeat;
-}
-
-/* ****main menu section**** */
-#m-section{
-	width: 960px;
-	padding:0px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-#m-menu{
-	float: left;
+body > main{
 	position: relative;
-	width: 100%;	
-}
+	padding-top: 120px;
+	background-image: url('../images/b1.png');
+	background-repeat: repeat;}
 
-#m-menu > div{
-	float:left;
-	margin:0px 0px 30px 30px;
-	padding:8px;
-	position:relative;
-	background: #2F2D2A repeat scroll 0% 0%;
-	border: 2px solid #BABABA;
-	border-radius: 150px;
-	width:280px;
-	height:280px;
-	cursor:pointer;
-	transition: background,border 0.3s ease-in 0s;
-}
-
-#m-menu > div:nth-child(3n+1){
-	clear:left;
-	margin-left:0px;
-}
-
-#m-menu > div:hover{
-	background: #BABABA repeat scroll 0% 0%;
-	border: 2px solid #2F2D2A;	
-}
-
-/*images*/
-.mnd-div,.mnd-div-x{
-	position:absolute;
-	margin:10px;
-	max-width:260px;
-	max-height: 260px;
-	border-radius:130px;	
-}
-
-.mnd-div-x{
-	opacity:0;
-	z-index:1;
-	transition: all 0.5s ease-in 0s;
-}
-
-.mnd-div img, .mnd-div-x img{
-	border: 1px solid #BABABA;
-	border-radius:130px;
-	width:100%;
-	height:100%;
-	transition: all 0.3s ease-in 0s;
-}
-
-/*images' headers*/
-.mnd-header{
-	position: absolute;
-	opacity:0.0;
-	background: url("../images/b2.png");
-	text-align: center;
-	transition: opacity 0.4s ease-in 0s;
-	width: 296px;
-	height: 148px;
-	top: 148px; 
-	z-index: 2;
-	margin-left: -10px;
-	border-bottom-left-radius: 150px;
-	border-bottom-right-radius: 150px;
-	border: 2px solid #2F2D2A;
-	border-top:none;
-}
-
-.mnd-header > h2{
-	padding-top: 65px;
-	colour: #2F2D2A;
-}
-
-
-/* ****secondary left menu**** */
-#s-menu{
-	display: none;
-	position: fixed;
-	float: left;
-	width: 150px;
-	height: 100%;
-	top:70px;	
-}
-#s-menu > nav > header{
-	height: 55px;
-	border-bottom: 1px dotted #BABABA;
-	background:#2F2D2A repeat scroll 0% 0%;
-	border-top-right-radius: 10px;
-	border:1px solid #BABABA;
-	border-left:none;
-}
-#lm-img{
-	display:none;
-	margin-right:5px;
-	margin-top:30px;
-	width:22px;
-	float:right;
-}
-
-#lm-img:hover{
-	cursor:pointer;
-}
-
-
-#s-menu > nav > a{
-	width: 150px;
-	border: 1px solid white;
-	display: block;
-	text-align: center;
-	padding: 10px 0px;
-	color:#da3838;
-	font-weight: bold;
-	margin: 5px 0;
-	border-radius: 20px;
-	background:#2F2D2A repeat scroll 0% 0%;
+/* > main initial menu < */
+	#bm-div2{
+		width: 960px;
+		margin-left: auto;
+		margin-right: auto;}
 	
-}
+	/* > navigation container < */
+		#bmd2-nav{
+			float: left;
+			position: relative;
+			width: 100%;}
+	
+		/* > navigation figures (external)<*/
+			#bmd2-nav > figure{
+				float: left;
+				margin: 0px 0px 30px 30px;
+				padding: 8px;
+				position: relative;
+				background: #2F2D2A repeat scroll 0% 0%;
+				border: 2px solid #BABABA;
+				border-radius: 150px;
+				width: 280px;
+				height: 280px;
+				cursor: pointer;
+				transition: background,border 0.3s ease-in 0s;}
+
+			#bmd2-nav > figure:nth-child(3n+1){
+				clear: left;
+				margin-left: 0px;}
+
+			#bmd2-nav > figure:hover{
+				background: #BABABA repeat scroll 0% 0%;
+				border: 2px solid #2F2D2A;}
+			
+			/* > navigation figures (internal)<*/
+				.mnd-div,.mnd-div-x{
+					position: absolute;
+					margin: 10px;
+					max-width: 260px;
+					max-height: 260px;
+					border-radius: 130px;}
+
+				.mnd-div-x{
+					opacity: 0;
+					z-index: 1;
+					transition: all 0.5s ease-in 0s;}
+				
+				/* > images & headers < */	
+					.mnd-div img, .mnd-div-x img{
+						border: 1px solid #BABABA;
+						border-radius: 130px;
+						width: 100%;
+						height: 100%;
+						transition: all 0.3s ease-in 0s;}
+								
+					.mnd-header{
+						position: absolute;
+						opacity: 0.0;
+						background: url("../images/b2.png");
+						text-align: center;
+						transition: opacity 0.4s ease-in 0s;
+						width: 296px;
+						height: 148px;
+						top: 148px; 
+						z-index: 2;
+						margin-left: -10px;
+						border-bottom-left-radius: 150px;
+						border-bottom-right-radius: 150px;
+						border: 2px solid #2F2D2A;
+						border-top: none;}
+
+						.mnd-header > h2{
+							padding-top: 65px;
+							colour: #2F2D2A;}
+							
+				/* > end images & headers < */
+			/* > end navigation figures (internal)<*/
+		/* > end navigation figures (external) <*/
+	/* > end navigation container < */			
+/* > end main initial menu < */
 
 
-#art-section{
-	margin: 0px 0% 0px 150px;	
-}
+/* > main aside menu (initially hidden)< */
+	#bm-aside{
+		display: none;
+		position: fixed;
+		float: left;
+		width: 150px;
+		height: 100%;
+		top: 70px;}
+		
+		#bm-aside > figure{
+			height: 55px;
+			border-bottom: 1px dotted #BABABA;
+			background: #2F2D2A repeat scroll 0% 0%;
+			border-top-right-radius: 10px;
+			border: 1px solid #BABABA;
+			border-left: none;}
+			
+		/* > image used as dropdown button < */
+			#bmafi{
+				display: none;
+				margin-right: 5px;
+				margin-top: 30px;
+				width: 22px;
+				float: right;}
 
-#art-section > article{
-	display: none;
-	margin:20px;
-	padding: 0px 20px;
-	border: 5px solid;
-	border-radius: 20px;
-	padding: 0px 20px;
-	background:#bababa;
-	text-align: justify;
-	line-height:160%;
-}
+			#bmafi:hover{
+				cursor: pointer;}
+		/* > end image used as dropdown button < */
 
-#art-section > article > header > img{
-	width: 150px;
-	border-radius: 150px;
-	margin-top: -70px;
-	margin-left: -25px;
-	margin-right: 20px;
-	float: left;
-	border: 5px solid;
-}
+		/* > links < */
+			#bm-aside > nav > a{
+				width: 150px;
+				border: 1px solid white;
+				display: block;
+				text-align: center;
+				padding: 10px 0px;
+				color: #da3838;
+				font-weight: bold;
+				margin: 5px 0;
+				border-radius: 20px;
+				background: #2F2D2A repeat scroll 0% 0%;}
+		
+		/* > end links < */
+/* > end main aside menu (initially hidden)< */
 
-#art-section > article > header > h2{
-	padding-top:10px;
-}
-#art-section > article > header > h3{
-	padding-top:5px;
-	padding-bottom:10px;
-	margin-left: 130px;
-	border-bottom: 1px dotted #2f2d2a;
-	font-size: 15px;
-}
+/* > main articles section (initially hidden)< */
+/* > common styles < */
+	#bm-div1{
+		margin: 0px 0% 0px 150px;}
 
-#art-section > article > header +p{
-	padding-top:30px;	
-}
+		#bm-div1 > article{
+			display: none;
+			margin: 20px;
+			padding: 0px 20px;
+			border: 5px solid;
+			border-radius: 20px;
+			padding: 0px 20px;
+			background: #bababa;
+			text-align: justify;
+			line-height: 160%;}
+		
+		/* > articles header < */
+			#bm-div1 > article > header{background:none;}
+			
+			#bm-div1 > article > header > img{
+				width: 150px;
+				border-radius: 150px;
+				margin-top: -70px;
+				margin-left: -25px;
+				margin-right: 20px;
+				float: left;
+				border: 5px solid;
+			}
 
-#art-section > article > p{
-	padding-top:10px;
-}
+			#bm-div1 > article > header > h2{padding-top: 10px;}
 
-#ar2 > div{
-	border-top: 1px dotted #2f2d2a;
-	margin-top: 15px;
-	padding-top: 15px;
-	padding-left: 5%;
-}
+			#bm-div1 > article > header > h3{
+				padding-top: 5px;
+				padding-bottom: 10px;
+				margin-left: 130px;
+				border-bottom: 1px dotted #2f2d2a;
+				font-size: 15px;}
+		/* > end articles header < */
+		
+	/* > articles paragraphs < */
+		#bm-div1 > article > header +p{padding-top: 30px;}
+		
+		#bm-div1 > article > p{padding-top: 10px;}
+	/* > end articles paragraphs < */
+	
+/* > end common styles < */	
 
-#ar2 > div > img{
-	float:right;
-	margin: 55px 5% 0px 0px;
-	height: 170px;
-}
-#ar2 > div > ul{
-	margin: 10px 20px 25px;
-}
-#ar2 > div > p > span{
-	font-weight: bold;
-}
+/* > specific styles per article < */
+	#ar2 > div{
+		border-top: 1px dotted #2f2d2a;
+		margin-top: 15px;
+		padding-top: 15px;
+		padding-left: 5%;}
 
+		#ar2 > div > img{
+			float: right;
+			margin: 55px 5% 0px 0px;
+			height: 170px;}
+			
+		#ar2 > div > ul{margin: 10px 20px 25px;}
+		
+		#ar2 > div > p > span{font-weight: bold;}
 
+	#ar3 > ul, #ar5 > ul {
+		-webkit-columns: auto 2; /* Chrome, Safari, Opera */
+	    -moz-columns: auto 2; /* Firefox */
+	    columns: auto 2;
+	    text-align: left;}
+
+	#ar3 > ul, #ar4 > ul, #ar5 > ul{margin: 20px 20px 25px;}
+		
+		#ar3 > ul > li, #ar4 > ul > li, #ar5 > ul > li{margin-bottom: 10px;}	
+/* > end specific styles per article < */
+/* > end main articles section (initially hidden)< */		
+		
+
+/*****************************/
+/* <-------- FOOTER -------> */
+/*****************************/
+
+body > footer{
+	border-top: 2px solid #BABABA;
+	color: #DA3838;}
+
+	body > footer > section{
+		text-shadow: 2px 2px 4px #000;
+		text-align: justify;
+		width: 30%;
+		float: left;
+		line-height: 200%;
+		margin-top: 50px;}
+
+	#fs1 {
+		margin-right: 15%;
+		margin-left: 15%;}
+		
+		#fs1 > form > input, #fs1 > form > textarea{
+			min-width: 100%;
+			max-width: 100%;
+			border-radius: 5px;}
+			
+		#fs1 > form > input{height: 25px;}
+			
+		#fs1 > form > textarea{
+			max-height: 100px;
+			min-height: 100px;}
+		
+		#fs2 > h2{padding-bottom: 20px;}
+	
+		#bttn1, #bttn2{
+			border-radius: 5px;
+			width: 80px;
+			height: 30px;
+			font-weight: bold;
+			color: rgb(47, 45, 42);
+			margin-top: 5px;
+			margin-right: 10px;}
+		
+		#bttn1{
+			background-color: rgb(218, 56, 56);
+			border-color: rgb(218, 56, 56);}
+		
+		#bttn2{
+			background-color: #BABABA;
+			border-color: #BABABA;}	
+			
+			
 /* **************************************** */
 /* **************@MEDIA TYPES************** */
 /* **************************************** */
 
-
+/* > when screen size <= 960px < */
 @media only screen and (max-width: 960px){
-   	#m-section{
+   	#bm-div2{
 		padding: 0px 5%;
-		width: 90%;
-	}
+		width: 90%;}
 	
-	#m-menu{
+	#bmd2-nav{
 		float: none;
 		margin: 0px auto;
 		position: relative;
-		width: 630px;
-	}
+		width: 630px;}
 	
-   	#m-menu > div:nth-child(3n+1){
-		clear:none;
-		margin-left:30px;
-	}
+   	#bmd2-nav > figure:nth-child(3n+1){
+		clear: none;
+		margin-left: 30px;}
 
-    #m-menu > div:nth-child(2n+1){
-		clear:left;
-		margin-left:0px;
-	}
+    #bmd2-nav > figure:nth-child(2n+1){
+		clear: left;
+		margin-left: 0px;}
 	
-	#ar2 > div > img{
-		display:none;
-	}
+	#ar2 > div > img{display: none;}
 }
 
+/* > when screen size <= 690 px < */
 @media only screen and (max-width: 690px){
-	#m-menu{
+	body > header{
+		position: relative;
+		float: left;}
+	
+	body > main{padding-top: 60px;}
+	
+	#bm-aside{
+		position: absolute;
+		top: 5px;}
+	
+	#bmd2-nav{
 		float: left;
-		margin: 0px,;
-		width: 100%;
-	}
-	#m-menu > div:nth-child(3n+1){
-		clear:left;
-		margin-left:0px;
-	}
-	#m-menu > div{
-		display:block;
+		margin: 0px;
+		width: 100%;}
+		
+	#bmd2-nav > figure:nth-child(3n+1){
+		clear: left;
+		margin-left: 0px;}
+		
+	#bmd2-nav > figure{
+		display: block;
 		box-sizing: border-box;
 		background: none;
 		border-width: 1px 0px;
@@ -365,17 +416,16 @@ a{text-decoration:none;}
 		position: relative;
 		width: 100%;
 		height: auto;
-		transition:none;
-	}
+		transition:none;}
+		
 	.mnd-header{
-		padding:0px;
-		margin:0px;
+		padding: 0px;
+		margin: 0px;
 		left: 45%;
 		top: 20%;
 		width: 55%;
 		height: 60%;
-		transition:none;
-	}
+		transition: none;}
 	
 	.mnd-div{
 		box-sizing: border-box;
@@ -385,68 +435,71 @@ a{text-decoration:none;}
 		padding: 4px;
 		position: absolute;
 		width: 40%;
-		height: auto;		
-	}
+		height: auto;}
+		
 	.mnd-div > img{
 		margin-bottom: -5px;
-		transition:none;
-	}
+		transition: none;}
+		
 	.mnd-div-x{
-	box-sizing: border-box;
+		box-sizing: border-box;
 		background: #D0D0D0 none repeat scroll 0% 0%;
 		border: 1px solid #B9B9B9;
 		border-radius: 50%;
 		padding: 4px;
 		position: relative;
 		width: 40%;
-		height: auto;	
-	}
+		height: auto;}
+		
 	.mnd-div-x > img{
 		margin-bottom: -5px;
-		transition:none;
-	}
+		transition: none;}
+		
 	.mnd-header{
 		background: none;
 		transition: none;
 		border: none;
 	}
-	.mnd-header > h2{
-		padding-top: 0px;
-	}
+	.mnd-header > h2{padding-top: 0px;}
 	
-	#art-section{
+	#bm-div1{
 		margin: 0px;
-		padding:0px 5px;	
-	}
-	#art-section > article > header > img{
+		padding: 0px 5px;}
+		
+	#bm-div1 > article > header > img{
 		width: 75px;
 		border-radius: 75px;
 		margin-top: -15px;
 		margin-left: -40px;
 		margin-right: 15px;
 		float: left;
-		border: 5px solid;
-	}
-	#lm-img{
-		display:block;
+		border: 5px solid;}
+		
+	#bmafi{
+		display: block;
 		-ms-transform: rotate(0deg); /* IE 9 */
 	    -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
-	    transform: rotate(0deg);
-	}
-	#art-section > article{
-		text-align:left;
-	}
-	#art-section > article > header +p{
-		padding-top:20px;	
-	}
+	    transform: rotate(0deg);}
+	    
+	#bm-div1 > article{	text-align: left;}
 	
-	#art-section > article > header > h3{
-		margin-left:0px;
-	}
+	#bm-div1 > article > header +p{padding-top: 20px;}
 	
-	#ar2 > div > ul{
+	#bm-div1 > article > header > h3{margin-left: 0px;}
+	
+	#ar2 > div > ul{margin: 10px 5px 25px;}
+	
+	#ar2 > div{padding-left:0px;}
+	
+	#ar3 > ul, #ar5 > ul{
 		margin: 10px 5px 25px;
-	}
-	#ar2 > div{
-		padding-left:0px;
-	}
+		-webkit-columns: 1; /* Chrome, Safari, Opera */
+   	 	-moz-columns: 1; /* Firefox */
+    	columns: 1;}
+    	
+    body > footer > section{
+    	float: initial;
+    	margin-right: 10%;
+    	margin-left: 10%;
+    	width: 80%;
+}

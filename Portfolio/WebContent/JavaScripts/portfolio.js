@@ -3,11 +3,11 @@
 
 //ID's : associated_function
 var hashtable = {
-		"h-title": fHTitle,
-		"hsb-coll-link": fSocialBtnCollLink,
-		"hsb-coll": fSocialBtnColl,
-		"m-menu": f690mainMenuFormat,
-		"lm-img": fLeftMenu
+		"bhs-title": fHTitle,
+		"bhsn-a1": fSocialBtnCollLink,
+		"bhsna1i": fSocialBtnColl,
+		"bmd2-nav": f690mainMenuFormat,
+		"bmafi": fLeftMenu
 };
 
 var activeArticle = 0;
@@ -58,13 +58,34 @@ function dMenuOut(elem){
 function reload(){
 	location.reload(true);
 }
+
+function fButton(value){
+	var input = document.getElementById("inp");
+	var text_area = document.getElementById("txt");
+	var msg = document.getElementById("sent-msg");
+	if(value == "send"){
+		if(input.value == "" || text_area.value == ""){
+			msg.style.color = "#DA3838";
+			msg.innerHTML = "Please fill up all camps.";
+		}
+		else{
+			msg.style.color = "rgb(36, 162, 42)";
+			msg.innerHTML = "Message has been sent successfuly.";
+		}
+	}
+	else{
+		msg.innerHTML="";
+		input.value = "";
+		text_area.value = "";
+	}
+}
 /* ****** ID-SPECIFIC FUNCTIONS ****** */
 /* used to change CSS and HTML element values */ 
 
 function fHTitle(event,value){
 	/* this function change the header's title when windowsize < 565px */
-	//ID = h-title
-	var element = document.getElementById("h-title");
+	//ID = bhs-title
+	var element = document.getElementById("bhs-title");
 	if(value <= 720){
 		if(value < 380)element.innerHTML = "";
 		else element.innerHTML = "X.I";
@@ -75,9 +96,9 @@ function fHTitle(event,value){
 function fSocialBtnCollLink(event,value){
 	/*this function collapse or uncollapse the header social buttons when 
 	 * windowsize changes*/
-	//ID = h-social-button-link
+	//ID = bhsn-a1
 	
-	var element = document.getElementById("hsb-coll-link");
+	var element = document.getElementById("bhsn-a1");
 	var parent = element.parentNode;
 	var d1 = "inline"
 	var d2 = "none";
@@ -99,12 +120,12 @@ function fSocialBtnCollLink(event,value){
 
 function fSocialBtnColl(event,value){
 	/*this function controles the dropdown function of the social collapsed buttons*/
-	//ID h-social-button
-	var element = document.getElementById("hsb-coll");
+	//ID bhsna1i
+	var element = document.getElementById("bhsna1i");
 	var pparent = element.parentNode.parentNode;
 	var d1 = "none";
 	if(value <= 960){
-		if(element == event.target && document.getElementById("hsb-cont-link").style.display == "none"){
+		if(element == event.target && document.getElementById("bhsn-a2").style.display == "none"){
 			d1 = "block";
 			pparent.setAttribute("style","border-radius: 10px;" +
 					"background-color: #2F2D2A;"+
@@ -125,7 +146,7 @@ function fSocialBtnColl(event,value){
 }
 
 function f690mainMenuFormat(event,value){
-	var element = document.getElementById("m-menu");
+	var element = document.getElementById("bmd2-nav");
 	if(value <= 690){
 		for(var i = 0; i < element.children.length; i++){
 			element.children[i].setAttribute("onmouseover","chg(this.children[2],'style','opacity:1')");
@@ -150,7 +171,7 @@ function fLeftMenu(event,value){
 		disp = "none";
 		rot = "rotate(0deg)";
 	}
-	else if(event.target != document.getElementById("lm-img")){
+	else if(event.target != document.getElementById("bmafi")){
 		if((ok = (value <= 690 && leftMenu))){
 			disp = "none";
 			rot = "rotate(0deg)";
@@ -164,9 +185,9 @@ function fLeftMenu(event,value){
 		for(var i = 1; i <= 6; i++){
 			document.getElementById("a"+i).style.display=disp;
 		}
-		document.getElementById("lm-img").style.msTransform = rot;
-		document.getElementById("lm-img").style.webkitTransform = rot;
-		document.getElementById("lm-img").style.transform = rot;
+		document.getElementById("bmafi").style.msTransform = rot;
+		document.getElementById("bmafi").style.webkitTransform = rot;
+		document.getElementById("bmafi").style.transform = rot;
 		leftMenu = !leftMenu;
 	}
 }
@@ -178,7 +199,7 @@ function openArticle(elem,artic){
 	activeArt(artic.slice(2,3));
 	
 	pparent.style.display = "none";
-	document.getElementById("s-menu").style.display = "block";
+	document.getElementById("bm-aside").style.display = "block";
 	
 }
 
@@ -209,9 +230,9 @@ function leftMenuDropDown(){
 	for(var i = 1; i <= 6; i++){
 		document.getElementById("a"+i).style.display=disp;
 	}
-	document.getElementById("lm-img").style.msTransform = rot;
-	document.getElementById("lm-img").style.webkitTransform = rot;
-	document.getElementById("lm-img").style.transform = rot;
+	document.getElementById("bmafi").style.msTransform = rot;
+	document.getElementById("bmafi").style.webkitTransform = rot;
+	document.getElementById("bmafi").style.transform = rot;
 	
 	leftMenu = !leftMenu;
 }

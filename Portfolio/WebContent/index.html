@@ -2,7 +2,6 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-			
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="CSS/style.css">
 		<script src="JavaScripts/portfolio.js"></script>
@@ -11,238 +10,293 @@
 		<link href='images/icon.ico' rel='shortcut icon' type='image/x-icon'>
 	</head>
 	<body onload="windResize()">
-		<div id="container">
-			<header>
-				<div id="h-div-image">
-					<img title="Main page" alt="home" src="images/ene.png" onmouseover="chg(this,'src','images/ene_hov.png');" onmouseout="chg(this,'src','images/ene.png');" onclick="reload();">
-				</div>
-				<div id="h-div-title">
-					<h1 id="h-title" class="rs">Xavier Ibáñez</h1>
-					<nav>
-						<a id="hsb-coll-link" class="rs" title="Social" href="#" >
-							<img id="hsb-coll" class="c-click" alt="" src="images/collapse.png" onmouseover="chg(this,'src','images/collapse_hov.png');" onmouseout="chg(this,'src','images/collapse.png');">
-						</a>
-						
-						<a title="Follow me in facebook" href="https://www.facebook.com/xavi.ibanezbarrios" target="_blank">
-							<img alt="" src="images/face.png" onmouseover="chg(this,'src','images/face_hov.png');" onmouseout="chg(this,'src','images/face.png');">
-						</a>
-						<a title="Follow me in google+" href="https://plus.google.com/109696929704588647281/about" target="_blank">
-							<img alt="" src="images/google.png" onmouseover="chg(this,'src','images/google_hov.png');" onmouseout="chg(this,'src','images/google.png');">
-						</a>
-						<a id="hsb-cont-link">
-							<img alt="" src="images/contact.png" onmouseover="chg(this,'src','images/contact_hov.png');" onmouseout="chg(this,'src','images/contact.png');">
-						</a>
-					</nav>
-				</div>
-			</header>
-			<main>
-<!-- left menu (initially hidden)-->
-				<aside id="s-menu">
-					<nav>
-						<header>
-							<img id="lm-img" class="rs c-click" src="images/red_arrow.png" onmouseover="chg(this,'src','images/arrow.png')" onmouseout="chg(this,'src','images/red_arrow.png')" onclick="leftMenuDropDown(false)">
-						</header>
-						<a id="a1" href="#" onclick="activeArt(1)" onmouseover="chg(this,'style','background-color:#bababa')" onmouseout="chg(this,'style','background-color:#2F2D2A')"><span>WHO I AM</span></a>
-						<a id="a2" href="#" onclick="activeArt(2)" onmouseover="chg(this,'style','background-color:#bababa')" onmouseout="chg(this,'style','background-color:#2F2D2A')"><span>WHAT I'VE DONE</span></a>
-						<a id="a3" href="#" onclick="activeArt(3)" onmouseover="chg(this,'style','background-color:#bababa')" onmouseout="chg(this,'style','background-color:#2F2D2A')"><span>WHAT I KNOW</span></a>
-						<a id="a4" href="#" onclick="activeArt(4)" onmouseover="chg(this,'style','background-color:#bababa')" onmouseout="chg(this,'style','background-color:#2F2D2A')"><span>WHAT I'VE LEARNED</span></a>
-						<a id="a5" href="#" onclick="activeArt(5)" onmouseover="chg(this,'style','background-color:#bababa')" onmouseout="chg(this,'style','background-color:#2F2D2A')"><span>WHAT I LIKE</span></a>
-						<a id="a6" href="#" onclick="activeArt(6)" onmouseover="chg(this,'style','background-color:#bababa')" onmouseout="chg(this,'style','background-color:#2F2D2A')"><span>WHAT I'VE WON</span></a>
-					</nav>
-				</aside>
+		<header>
+			<figure id="bh-figure">
+				<img title="Main page" alt="home" src="images/ene.png" onmouseover="chg(this,'src','images/ene_hov.png');" onmouseout="chg(this,'src','images/ene.png');" onclick="reload();">
+			</figure>
+			<section id="bh-section">
+				<h1 id="bhs-title" class="rs">Xavier Ibáñez</h1>
+				<nav>
+					<a id="bhsn-a1" class="rs" title="Social" href="#" >
+						<img id="bhsna1i" class="c-click" alt="" src="images/collapse.png" onmouseover="chg(this,'src','images/collapse_hov.png');" onmouseout="chg(this,'src','images/collapse.png');">
+					</a>
+					
+					<a id="bhsn-a2" title="Follow me in facebook" href="https://www.facebook.com/xavi.ibanezbarrios" target="_blank">
+						<img alt="" src="images/face.png" onmouseover="chg(this,'src','images/face_hov.png');" onmouseout="chg(this,'src','images/face.png');">
+					</a>
+					<a title="Follow me in google+" href="https://plus.google.com/109696929704588647281/about" target="_blank">
+						<img alt="" src="images/google.png" onmouseover="chg(this,'src','images/google_hov.png');" onmouseout="chg(this,'src','images/google.png');">
+					</a>
+					<a title="Contact me" href="#fs1">
+						<img alt="" src="images/contact.png" onmouseover="chg(this,'src','images/contact_hov.png');" onmouseout="chg(this,'src','images/contact.png');">
+					</a>
+				</nav>
+			</section>
+		</header>
+		<main>
+<!-- aside secondary menu (initially hidden)-->
+			<aside id="bm-aside">
+				<figure>
+					<img id="bmafi" class="rs c-click" alt="" src="images/red_arrow.png" onmouseover="chg(this,'src','images/arrow.png')" onmouseout="chg(this,'src','images/red_arrow.png')" onclick="leftMenuDropDown(false)">
+				</figure>
+				<nav>
+					<a id="a1" href="#" onclick="activeArt(1)" onmouseover="chg(this,'style','background-color:#bababa')" onmouseout="chg(this,'style','background-color:#2F2D2A')"><span>WHO I AM</span></a>
+					<a id="a2" href="#" onclick="activeArt(2)" onmouseover="chg(this,'style','background-color:#bababa')" onmouseout="chg(this,'style','background-color:#2F2D2A')"><span>WHAT I'VE DONE</span></a>
+					<a id="a3" href="#" onclick="activeArt(3)" onmouseover="chg(this,'style','background-color:#bababa')" onmouseout="chg(this,'style','background-color:#2F2D2A')"><span>WHAT I KNOW</span></a>
+					<a id="a4" href="#" onclick="activeArt(4)" onmouseover="chg(this,'style','background-color:#bababa')" onmouseout="chg(this,'style','background-color:#2F2D2A')"><span>WHAT I'VE LEARNED</span></a>
+					<a id="a5" href="#" onclick="activeArt(5)" onmouseover="chg(this,'style','background-color:#bababa')" onmouseout="chg(this,'style','background-color:#2F2D2A')"><span>WHAT I LIKE</span></a>
+					<a id="a6" href="#" onclick="activeArt(6)" onmouseover="chg(this,'style','background-color:#bababa')" onmouseout="chg(this,'style','background-color:#2F2D2A')"><span>WHAT I'VE WON</span></a>
+				</nav>
+			</aside>
 <!-- articles (initially hidden)-->
-				<section id="art-section">
-					<article id="ar1">
-						<header>
-							<img alt="" src="images/myf.png">
-							<h2>WHO I AM</h2>
-							<h3>personal statement</h3>
-						</header>
+			<div id="bm-div1">
+				<article id="ar1">
+					<header>
+						<img alt="" src="images/myf.png">
+						<h2>WHO I AM</h2>
+						<h3>personal statement</h3>
+					</header>
+					<p>
+						My name is Xavier Ibáñez Barrios and I am from Spain. I am sure you are now thinking about what is that letter: "ñ", and <a title="how the letter 'ñ' sounds" href="https://www.youtube.com/watch?v=PKh9vaJmxh8" target="_blank">how it sounds</a>.
+						Well, this is one of the 27 letters of the spanish alphabet and it is as important as the other 26. There are a lot of words containing it,
+						for example: 'Spain' in spanish is 'España', 'chestnut' in spanish is 'castaña' or 'mountain' in spanish is 'montaña'.<br> As you can see, my first surname contains the 'ñ' sound and I supouse that it is the reason why all people who talk in english
+						prefer to use my second surname rather than my first, the 'ñ' scares them. 
+					</p>
+					<p>
+						In Spain is said that surnames ended with "-ez" mean "son of" so Ibáñez means "Iban's son". There are a lot of common spanish surnames of this style like "González" that means "Gonzalo's son" or "Fernández" that means "Fernando's son". But if you go to spain
+						and ask about "Ibáñez" surname to someone, it is certain that most of people will say to you something like "Ibáñez is the <a title="Mort & phil wikipage" href="https://en.wikipedia.org/wiki/Mort_%26_Phil" target="_blank">Mortadelo & Filemon</a> creator!".
+						I have more things in common with <a title="Francisco Ibañez wikipage" href="https://en.wikipedia.org/wiki/Francisco_Ib%C3%A1%C3%B1ez_Talavera" target="_blank">Francisco Ibáñez</a> than the surname, I am as crazy as his creations and I was born in Barcelona as well.
+					</p>
+					<p>
+						What can I say about my own city <a title="BCN" href="https://en.wikipedia.org/wiki/Barcelona" target="_blank">Barcelona</a>? It is an awesome beautiful city, It has the sea at the front and two marvelous mountains in the back. The weather is Mediterranean so it is perfect
+						for walking both day and night, winter and summer. There are a lot of interesting turistic sites you may visit, and you can also taste all the typical spanish food anywhere you go.
+					</p>
+					<p>
+						I think in the end I have not talked much about me but if you are interested in getting to know me more thoroughly, you can contact with me via the links available on the top of this webpage.
+					</p>
+				</article>
+				<article id="ar2">
+					<header>
+						<img alt="" src="images/bowl.png">
+						<h2>WHAT I'VE DONE</h2>
+						<h3>my experiences</h3>
+					</header>
+					<p>
+						Life is meant to be enjoyed so one way to reach that goal is finding a job you enjoy as well.
+						I am fortunate to be able to say that I have worked in two nice jobs along my life.
+					</p>
+					<div>	
+						<img alt="" src="images/hnkl.png">					
 						<p>
-							My name is Xavier Ibáñez Barrios and I am from Spain. I am sure you are now thinking about what is that letter: "ñ", and <a title="how the letter 'ñ' sounds" href="https://www.youtube.com/watch?v=PKh9vaJmxh8" target="_blank">how it sounds</a>.
-							Well, this is one of the 27 letters of the spanish alphabet and it is as important as the other 26. There are a lot of words containing it,
-							for example: 'Spain' in spanish is 'España', 'chestnut' in spanish is 'castaña' or 'mountain' in spanish is 'montaña'.<br> As you can see, my first surname contains the 'ñ' sound and I supouse that it is the reason why all people who talk in english
-							prefer to use my second surname rather than my first, the 'ñ' scares them. 
-						</p>
-						<p>
-							In Spain is said that surnames ended with "-ez" mean "son of" so Ibáñez means "Iban's son". There are a lot of common spanish surnames of this style like "González" that means "Gonzalo's son" or "Fernández" that means "Fernando's son". But if you go to spain
-							and ask about "Ibáñez" surname to someone, it is certain that most of people will say to you something like "Ibáñez is the <a title="Mort & phil wikipage" href="https://en.wikipedia.org/wiki/Mort_%26_Phil" target="_blank">Mortadelo & Filemon</a> creator!".
-							I have more things in common with <a title="Francisco Ibañez wikipage" href="https://en.wikipedia.org/wiki/Francisco_Ib%C3%A1%C3%B1ez_Talavera" target="_blank">Francisco Ibáñez</a> than the surname, I am as crazy as his creations and I was born in Barcelona as well.
-						</p>
-						<p>
-							What can I say about my own city <a title="BCN" href="https://en.wikipedia.org/wiki/Barcelona" target="_blank">Barcelona</a>? It is an awesome beautiful city, It has the sea at the front and two marvelous mountains in the back. The weather is Mediterranean so it is perfect
-							for walking both day and night, winter and summer. There are a lot of interesting turistic sites you may visit, and you can also taste all the typical spanish food anywhere you go.
-						</p>
-						<p>
-							I think in the end I have not talked much about me but if you are interested in getting to know me more thoroughly, you can contact with me via the links available on the top of this webpage.
-						</p>
-					</article>
-					<article id="ar2">
-						<header>
-							<img alt="" src="images/bowl.png">
-							<h2>WHAT I'VE DONE</h2>
-							<h3>my experiences</h3>
-						</header>
-						<p>
-							Life is meant to be enjoyed so one way to reach that goal is finding a job you enjoy as well.
-							I am fortunate to be able to say that I have worked in two nice jobs along my life.
-						</p>
-						<div>	
-							<img alt="" src="images/hnkl.png">					
-							<p>
-								<span>DATES:</span> (06/2007 - 09/2007)<br>
-								<span>COMPANY:</span> <a title="Henkel Iberica home page" href="http://www.henkel.com/" target="_blank">Henkel Iberica S.A</a><br>
-								<span>POSITION COVERED:</span> Warehouse assistant.<br>
-								<span>TASKS DONE:</span>
-							</p>
-							<ul>
-								<li>Take care of delivery notes and invoices.</li>
-								<li>Manage articles inputs and outputs.</li>
-								<li>Do inventory.</li>
-								<li>Solve order issues.</li>
-								<li>Material distribution and organization.</li>
-								<li>Special package preparation.</li>
-							</ul>
-						</div>
-						<div>
-							<img alt="" src="images/npb.png">
-							<p>
-								<span>DATES:</span> (09/2011 - 09/2012)<br>
-								<span>COMPANY:</span> <a title="Newpark bowling" href="http://www.newparkbowling.com/" target="_blank">Newpark bowling</a><br>
-								<span>POSITION COVERED:</span> Hall staff.<br>
-								<span>TASKS DONE:</span>
-							</p>
-							<ul>
-								<li>Take care of the arcade machines.</li>
-								<li>Help and solve clients issues.</li>
-								<li>Change game tickets for prizes.</li>
-								<li>Bowling zone maintenance and tracks allocation.</li>
-								<li>Serve in bar zone.</li>
-								<li>Organize several events.</li>  
-							</ul>	
-						</div>
-					</article>
-					<article id="ar3">
-						<header>
-							<img alt="" src="images/micro.png">
-							<h2>WHAT I KNOW</h2>
-							<h3>my skills</h3>
-						</header>
-						<p>
-							Knowledge is something that needs to be feeded along life. Nobody is born knowing what he knows when he dies, and I am not a special case.
-							I have been studying a lot of years in order to learn about things that seem interesting to me, so at that point in my life, I can list them as follows:
+							<span>DATES:</span> (06/2007 - 09/2007)<br>
+							<span>COMPANY:</span> <a title="Henkel Iberica home page" href="http://www.henkel.com/" target="_blank">Henkel Iberica S.A</a><br>
+							<span>POSITION COVERED:</span> Warehouse assistant.<br>
+							<span>TASKS DONE:</span>
 						</p>
 						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
+							<li>Take care of delivery notes and invoices.</li>
+							<li>Manage articles inputs and outputs.</li>
+							<li>Do inventory.</li>
+							<li>Solve order issues.</li>
+							<li>Material distribution and organization.</li>
+							<li>Special package preparation.</li>
 						</ul>
-					</article>
-					<article id="ar4">
-						<header>
-							<img alt="" src="images/education.png">
+					</div>
+					<div>
+						<img alt="" src="images/npb.png">
+						<p>
+							<span>DATES:</span> (09/2011 - 09/2012)<br>
+							<span>COMPANY:</span> <a title="Newpark bowling" href="http://www.newparkbowling.com/" target="_blank">Newpark bowling</a><br>
+							<span>POSITION COVERED:</span> Hall staff.<br>
+							<span>TASKS DONE:</span>
+						</p>
+						<ul>
+							<li>Take care of the arcade machines.</li>
+							<li>Help and solve clients issues.</li>
+							<li>Change game tickets for prizes.</li>
+							<li>Bowling zone maintenance and tracks allocation.</li>
+							<li>Serve in bar zone.</li>
+							<li>Organize several events.</li>  
+						</ul>	
+					</div>
+				</article>
+				<article id="ar3">
+					<header>
+						<img alt="" src="images/micro.png">
+						<h2>WHAT I KNOW</h2>
+						<h3>my skills</h3>
+					</header>
+					<p>
+						Knowledge is something that needs to be feeded along life. Nobody is born knowing what he knows when he dies, and I am not a special case.
+						I have been studying a lot of years in order to learn about things that seem interesting to me, so at that point in my life, I can list them as follows:
+					</p>
+					<ul>
+						<li>C, C++, C# programming.</li>
+						<li>Java programming.</li>
+						<li>x86 assembler programming.</li>
+						<li>Conscious programming regarding the arquitecture (Intel processors)</li>
+						<li>Electronic circuits design.</li>
+						<li>Embedded systems solutions.</li>
+						<li>PIC and Arduino programming.</li>
+						<li>Operative systems based on UNIX.</li>
+						<li>UNIX operative systems administration.</li>
+						<li>Multiprocessors protocols.</li>
+						<li>Network protocols (TCP/IP, UDP, OSPF, BGP, STP, MPLS).</li>
+						<li>Uniprocessors design.</li>
+						<li>Basic Web Design (HTML5, CSS3, JavaScript).</li>
+						<li>Basic computer forensics.</li>
+					</ul>
+				</article>
+				<article id="ar4">
+					<header>
+						<img alt="" src="images/education.png">
+						<h2>WHAT I'VE LEARNED</h2>
+						<h3>my education</h3>
+					</header>
+					<p>
+						Nowadays the work experience is underestimated, you are more important for the titles you have than for what you really know. 
+						I do not have a lot of titles, but I hope to have more in the future. "Hope is the last thing you lose". 
+					</p>
+					<ul>
+						<li>(2005 - 2007) Technological science at A levels. (Centre d'estudis Roca ,Barcelona)</li>
+						<li>(2005 - 2007) C1 DGPL Catalan language certificate. (Centre d'estudis Roca, Barcelona)</li>
+						<li>(2008 - 2009) PET Cambridge University English language certificate. (Oficial language school, Barcelona)</li>
+						<li>(2012 - current) Bachelor degree in computer science, specialized in computer architecture.(Politechnic University of Barcelona(UPC))</li>	
+					</ul>
+				</article>
+				<article id="ar5">
+					<header>
+						<img alt="" src="images/hobby.png">
+						<h2>WHAT I LIKE</h2>
+						<h3>hobbies & interests</h3>
+					</header>
+					<p>
+						There are a lot of things that I enjoy but many of them are beyond the reach of my hand (at least for the moment), like drive a train or look at the Earth from space.
+						Because that, I am compelled to list the following ones (they are less thrilling but more common):
+					</p>
+					<ul>
+						<li>Play cards in the university bar.</li>
+						<li>Drive a car during the nigth.</li>
+						<li>Dissasemble things to see how they are made.</li>
+						<li>Design and make circuits.</li>
+						<li>Make mobile phone applications.</li>
+						<li>Spend time with my year and a half nephew.</li>
+						<li>Listen to music and dance it if nobody is looking at me.</li>
+						<li>Improve my culinary techniques in the kichen.</li>
+						<li>Eating with my grandmothers (they cook delicious food).</li>
+						<li>Make garden works (if the day is sunny).</li>
+						<li>Ride bike over the mountain (if the day is sunny as well).</li>
+						<li>And maybe...  ...do Rich Web Application homework...</li>	
+					</ul>
+				</article>
+				<article id="ar6">
+					<header>
+						<img alt="" src="images/awards.png">
+						<h2>WHAT I'VE WON</h2>
+						<h3>honours & awards</h3>
+					</header>
+				</article>
+			</div>
+<!-- first main menu -->				
+			<div id=bm-div2>
+				<nav id="bmd2-nav" class="rs">
+					<figure onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);" onclick="openArticle(this,'ar1');">
+						<header class="mnd-header">
+							<h2>WHO I AM</h2>
+							<p>personal statement</p>
+						</header>
+						<figure class="mnd-div">
+							<img alt="" src="images/myf_bw.png">
+						</figure>
+						<figure class="mnd-div-x">
+							<img alt="" src="images/myf.png">
+						</figure>
+					</figure>
+					<figure onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);" onclick="openArticle(this,'ar2');">
+						<header class="mnd-header">
+							<h2>WHAT I'VE DONE</h2>
+							<p>my experiences</p>
+						</header>
+						<figure class="mnd-div">
+							<img alt="" src="images/bowl_bw.png">
+						</figure>
+						<figure class="mnd-div-x">
+							<img alt="" src="images/bowl.png">
+						</figure>
+					</figure>
+					<figure onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);" onclick="openArticle(this,'ar3');">
+						<header class="mnd-header">
+							<h2>WHAT I KNOW</h2>
+							<p>my skills</p>
+						</header>
+						<figure class="mnd-div">
+							<img alt="" src="images/micro_bw.png">
+						</figure>
+						<figure class="mnd-div-x">
+							<img alt="" src="images/micro.png">
+						</figure>
+					</figure>
+					<figure onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);" onclick="openArticle(this,'ar4');">
+						<header class="mnd-header">
 							<h2>WHAT I'VE LEARNED</h2>
-							<h3>my education</h3>
+							<p>my education</p>
 						</header>
-					</article>
-					<article id="ar5">
-						<header>
-							<img alt="" src="images/hobby.png">
+						<figure class="mnd-div">
+							<img alt="" src="images/education_bw.png">
+						</figure>
+						<figure class="mnd-div-x">
+							<img alt="" src="images/education.png">
+						</figure>
+					</figure>
+					<figure onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);" onclick="openArticle(this,'ar5');">
+						<header class="mnd-header">
 							<h2>WHAT I LIKE</h2>
-							<h3>hobbies & interests</h3>
+							<p>hobbies & interests</p>
 						</header>
-					</article>
-					<article id="ar6">
-						<header>
-							<img alt="" src="images/awards.png">
+						<figure class="mnd-div">
+							<img alt="" src="images/hobby_bw.png">
+						</figure>
+						<figure class="mnd-div-x">
+							<img alt="" src="images/hobby.png">
+						</figure>
+					</figure>
+					<figure onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);" onclick="openArticle(this,'ar6');">
+						<header class="mnd-header">
 							<h2>WHAT I'VE WON</h2>
-							<h3>honours & awards</h3>
+							<p>honours & awards</p>
 						</header>
-					</article>
-				</section>
-<!-- first menu -->				
-				<section id=m-section>
-					<nav id="m-menu" class="rs">
-						<div onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);" onclick="openArticle(this,'ar1');">
-							<header class="mnd-header">
-								<h2>WHO I AM</h2>
-								<p>personal statement</p>
-							</header>
-							<div class="mnd-div">
-								<img alt="" src="images/myf_bw.png">
-							</div>
-							<div class="mnd-div-x">
-								<img alt="" src="images/myf.png">
-							</div>
-						</div>
-						<div onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);" onclick="openArticle(this,'ar2');">
-							<header class="mnd-header">
-								<h2>WHAT I'VE DONE</h2>
-								<p>my experiences</p>
-							</header>
-							<div class="mnd-div">
-								<img alt="" src="images/bowl_bw.png">
-							</div>
-							<div class="mnd-div-x">
-								<img alt="" src="images/bowl.png">
-							</div>
-						</div>
-						<div onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);" onclick="openArticle(this,'ar3');">
-							<header class="mnd-header">
-								<h2>WHAT I KNOW</h2>
-								<p>my skills</p>
-							</header>
-							<div class="mnd-div">
-								<img alt="" src="images/micro_bw.png">
-							</div>
-							<div class="mnd-div-x">
-								<img alt="" src="images/micro.png">
-							</div>
-						</div>
-						<div onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);" onclick="openArticle(this,'ar4');">
-							<header class="mnd-header">
-								<h2>WHAT I'VE LEARNED</h2>
-								<p>my education</p>
-							</header>
-							<div class="mnd-div">
-								<img alt="" src="images/education_bw.png">
-							</div>
-							<div class="mnd-div-x">
-								<img alt="" src="images/education.png">
-							</div>
-						</div>
-						<div onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);" onclick="openArticle(this,'ar5');">
-							<header class="mnd-header">
-								<h2>WHAT I LIKE</h2>
-								<p>hobbies & interests</p>
-							</header>
-							<div class="mnd-div">
-								<img alt="" src="images/hobby_bw.png">
-							</div>
-							<div class="mnd-div-x">
-								<img alt="" src="images/hobby.png">
-							</div>
-						</div>
-						<div onmouseover="dMenuOver(this);" onmouseout="dMenuOut(this);" onclick="openArticle(this,'ar6');">
-							<header class="mnd-header">
-								<h2>WHAT I'VE WON</h2>
-								<p>honours & awards</p>
-							</header>
-							<div class="mnd-div">
-								<img alt="" src="images/awards_bw.png">
-							</div>
-							<div class="mnd-div-x">
-								<img alt="" src="images/awards.png">
-							</div>
-						</div>
-					</nav>
-	
-				</section>
-			</main>
-			<footer>
-			</footer>
-		</div>
+						<figure class="mnd-div">
+							<img alt="" src="images/awards_bw.png">
+						</figure>
+						<figure class="mnd-div-x">
+							<img alt="" src="images/awards.png">
+						</figure>
+					</figure>
+				</nav>
+			</div>
+		</main>
+		<footer>
+			
+			<section id="fs1">
+				<h2>CONTACT ME</h2>
+				<form>
+					Email Address:<br>
+					<input id="inp" placeholder="my@address.domain"><br>
+					Message:<br>
+					<textarea id="txt" rows="50" cols="45" placeholder="Enter message here"></textarea><br>
+					<button id="bttn1" type="button" onclick="fButton('send')">SEND</button>
+					<span id="sent-msg"></span><br>
+					<button id="bttn2" type="button" onclick="fButton('clear')">CLEAR</button>
+				</form>
+			</section>
+			<section id="fs2">
+				<h2>ADDITIONAL INFO</h2>
+				<p> 
+					This portfolio has been made as an assignment of Rich Web Application Technologies, which is a 4th year subject in Computer Science Bachelor Degree at DIT (Dublin Institute of Technology).
+				 	It is made using HTML5, CSS3 and JavaScript and thinking on a responsive web design.
+				</p>
+			</section>
+		</footer>
 	</body>
 </html>
 
